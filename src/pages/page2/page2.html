@@ -33,6 +33,14 @@
 
   <ion-buttons padding> 
     <button ion-button color="danger" full (click)="calcImc()">Calcular IMC</button>
-    {{imc}}
   </ion-buttons>
+  
+  <ion-card>
+    <ion-card-header>
+      <p>IMC: {{imc}}</p>
+    </ion-card-header>
+    <ion-card-content>
+      {{name}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
