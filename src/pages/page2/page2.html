@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>IMC</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col offset-10>
+        <img src="../assets/images/calc.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid padding>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input type="text" placeholder="Peso em KG" [(ngModel)]="peso"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-input type="text" placeholder="Altura" [(ngModel)]="altura"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-buttons padding> 
+    <button ion-button color="danger" full (click)="calcImc()">Calcular IMC</button>
+    {{imc}}
+  </ion-buttons>
+</ion-content>
